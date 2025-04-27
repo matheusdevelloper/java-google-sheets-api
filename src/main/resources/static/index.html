@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registrar Despesa</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <i class="fas fa-moon dark-mode-toggle" id="toggleDarkMode" title="Alternar modo"></i>
+
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form id="despesaForm">
+        <h2>Lançar Despesa</h2>
+
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data" required>
+
+        <label for="categoria">Categoria</label>
+        <input type="text" name="categoria" id="categoria" required>
+
+        <label for="descricao">Descrição</label>
+        <input type="text" name="descricao" id="descricao" required>
+
+        <label for="valor">Valor</label>
+        <input type="number" name="valor" id="valor" step="0.01" required>
+
+        <button type="submit">Registrar</button>
+      </form>
+
+      <div class="message" id="resumo">
+        <h3>Resumo da Despesa</h3>
+        <p><strong>Data:</strong> <span id="resumoData"></span></p>
+        <p><strong>Categoria:</strong> <span id="resumoCategoria"></span></p>
+        <p><strong>Descrição:</strong> <span id="resumoDescricao"></span></p>
+        <p><strong>Valor:</strong> R$ <span id="resumoValor"></span></p>
+        <button id="btnEditar" class="btn-voltar" style="background-color:#ffc107;">Editar</button>
+        <button id="btnConfirmar" class="btn-voltar">Confirmar</button>
+      </div>
+
+      <div class="message" id="message">
+        <i class="fas fa-check-circle icon-success"></i>
+        <p>Despesa registrada com sucesso!</p>
+        <button class="btn-voltar" id="btnVoltar">Lançar outra despesa</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
